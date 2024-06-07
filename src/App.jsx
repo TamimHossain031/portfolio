@@ -1,12 +1,12 @@
+import { useState } from "react";
 import "./App.css";
 import Page from "./components/Page";
-import {useState} from 'react';
 
 function App() {
-  const[dark,setDark] = useState(false);
+  const [dark, setDark] = useState(false);
   return (
-    <section className={dark ? 'dark' : ''}>
-      <Page dark={dark} handleDark={() => setDark(dark => !dark)} />
+    <section className={dark ? "dark" : ""}>
+      <Page dark={dark} handleDark={() => setDark((dark) => !dark)} />
     </section>
   );
 }
