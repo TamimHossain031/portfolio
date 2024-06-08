@@ -38,6 +38,6 @@ export default function Nav() {
 function Link({data}){
     const{name,logo}=data
     return(
-        <a href={`#${name}`} className='text-[18px] flex flex-col justify-center align-middle items-center size-[60px] bg-slate-300/30 dark:text-white dark:bg-white/10 m-[3px] gap-[6px] shadow-md rounded-sm hover:transition-all hover:text-white hover:to-[#FC2A68] hover:from-[#F93817] hover:bg-gradient-to-tr'>{logo}<span className='capitalize text-[11px]'>{name}</span></a>
+        <a href={`#${name}`} className='text-[18px] flex flex-col justify-center align-middle items-center size-[60px] bg-slate-300/30 dark:text-white dark:bg-white/10 m-[3px] gap-[6px] shadow-md rounded-sm hover:transition-all hover:text-white hover:to-[#FC2A68] hover:from-[#F93817] hover:bg-gradient-to-tr'>{logo}<span className='capitalize text-[10px]'>{name}</span></a>
     )
 }
