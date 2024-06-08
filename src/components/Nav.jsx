@@ -54,7 +54,7 @@ export default function Nav() {
 }
 
 function Link({ data }) {
-  const { name, logo } = data;
+  const { name, logo } = data ;
   return (
     <a
       href={`#${name}`}
