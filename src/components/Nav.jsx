@@ -36,9 +36,7 @@ export default function Nav() {
   return (
     <>
       <nav
-        className={`flex flex-col bg-white/50 dark:bg-[#22303c]/30 transition-all duration-500 backdrop-blur-[20px] w-fit fixed top-[10%] right-[${
-          show ? "0px" : "-100px"
-        }]  p-2 rounded-md mx-auto shadow-xl justify-around`}
+        className={`flex flex-col bg-white/50 dark:bg-[#22303c]/30 transition-all duration-500 backdrop-blur-[20px] w-fit fixed top-[10%] ${show ? 'right-[-100px]' : 'right-[0px]'}  p-2 rounded-md mx-auto shadow-xl justify-around`}
       >
         <button
           className="absolute top-[20px] left-[-50px]  bg-gradient-to-r text-white from-[#FC2A68] to-[#F93817] size-[30px] flex justify-center items-center"
