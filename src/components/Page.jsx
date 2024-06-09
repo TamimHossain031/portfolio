@@ -11,7 +11,7 @@ export default function Page({ dark, handleDark }) {
       <header className="w-[100dvw] h-[100px] z-2 p-4 flex justify-between relative">
         <div></div>
         <button
-          className="size-10 bg-white/60 hover:bg-white dark:bg- transition-colors text-blue-900 fixed top-10  right-5 z-20 grid justify-center items-center rounded-md "
+          className="size-10 bg-white/60 hover:bg-white dark:bg- transition-colors text-blue-900 fixed top-5  right-5 z-20 grid justify-center items-center rounded-md "
           onClick={handleDark}
         >
           {dark ? <GoSun /> : <BsFillMoonStarsFill />}
