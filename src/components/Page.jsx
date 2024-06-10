@@ -19,7 +19,7 @@ export default function Page({ dark, handleDark }) {
       </header>
       <section className='flex flex-col gap-5'>
         <Identity />
-        <AllDetails/>
+      
       </section>
     </main>
   );
