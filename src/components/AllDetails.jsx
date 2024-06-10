@@ -1,8 +1,8 @@
 import{Suspense} from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { lazyLoad } from "../utiles/lazyLoad";
-const Layout = lazyLoad("../components/Layout.jsx", "Layout");
-const About = lazyLoad("../components/About.jsx", "About");
+const Layout = lazyLoad("../components/Layout.jsx");
+const About = lazyLoad("../components/About.jsx");
 const Certificate = lazyLoad("../components/Certificate.jsx");
 const Contact = lazyLoad("../components/Contact.jsx");
 const Resume = lazyLoad("../components/Resume.jsx");
