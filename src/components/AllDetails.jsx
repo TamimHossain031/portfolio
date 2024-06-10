@@ -1,15 +1,24 @@
-import Nav from "./Nav";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import About from "./About";
+import Resume from "./Resume";
+import Works from "./Works";
+import Certificate from "./Certificate";
+import Contact from "./Contact";
 export default function AllDetails(){
     return (
-            <section className='w-[80%] mx-auto sticky top-0'>
-               <Nav/>
-                <div>
-                    <article id='about'>
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut repudiandae debitis cum vero? Non quod incidunt quo? Quibusdam quod eos ex excepturi? Sint eius nisi quo reprehenderit delectus molestiae impedit!
-                    </article>
-                </div>
-
-            </section>
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index path='about' element={<About />} />
+            <Route path="resume" element={<Resume />} />
+            <Route path="works" element={<Works />} />
+            <Route path="certificate" element={<Certificate />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+            
     );
 }

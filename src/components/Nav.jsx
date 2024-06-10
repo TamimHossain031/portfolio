@@ -8,8 +8,10 @@ import {
 import { HiOutlineDocumentText } from "react-icons/hi2";
 import { PiCertificate } from "react-icons/pi";
 import { RiContactsBook3Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 export default function Nav() {
   const [show, setShow] = useState(true);
+  const [active, setActive] = useState("about");
 
   const menu = [
     {
@@ -36,7 +38,9 @@ export default function Nav() {
   return (
     <>
       <nav
-        className={`flex flex-col bg-white/50 dark:bg-[#22303c]/30 transition-all duration-500 backdrop-blur-[20px] w-fit fixed top-[10%] ${show ? 'right-[-100px]' : 'right-[0px]'}  p-2 rounded-md mx-auto shadow-xl justify-around`}
+        className={`flex flex-col bg-white/50 dark:bg-[#22303c]/30 transition-all duration-500 backdrop-blur-[20px] w-fit fixed top-[10%] ${
+          show ? "right-[-100px]" : "right-[0px]"
+        }  p-2 rounded-md mx-auto shadow-xl justify-around z-[1000]`}
       >
         <button
           className="absolute top-[20px] left-[-50px]  bg-gradient-to-r text-white from-[#FC2A68] to-[#F93817] size-[30px] flex justify-center items-center"
@@ -46,22 +50,33 @@ export default function Nav() {
         </button>
         {menu &&
           menu.map((single, index) => (
-            <Link key={crypto.randomUUID()} data={single} />
+            <SingleNav
+              key={crypto.randomUUID()}
+              data={single}
+              active={active}
+              onActive={() => setActive(single.name)}
+            />
           ))}
       </nav>
     </>
   );
 }
 
-function Link({ data }) {
-  const { name, logo } = data ;
+function SingleNav({ data, active, onActive }) {
+  const { name, logo } = data;
+
   return (
-    <a
-      href={`#${name}`}
-      className="text-[18px] flex flex-col justify-center align-middle items-center size-[60px] bg-slate-300/30 dark:text-white dark:bg-white/10 m-[3px] gap-[6px] shadow-md rounded-sm hover:transition-all hover:text-white hover:to-[#FC2A68] hover:from-[#F93817] hover:bg-gradient-to-tr"
-    >
-      {logo}
-      <span className="capitalize text-[10px]">{name}</span>
-    </a>
+    <button onClick={onActive}>
+      <Link
+        to={name}
+        href={`#${name}`}
+        className={`text-[18px] flex flex-col justify-center align-middle items-center size-[60px] bg-slate-300/30 dark:text-white dark:bg-white/10 m-[3px] gap-[6px] shadow-md rounded-sm hover:transition-all hover:nav-bg ${
+          name == active ? "nav-bg" : ""
+        }`}
+      >
+        {logo}
+        <span className="capitalize text-[10px]">{name}</span>
+      </Link>
+    </button>
   );
 }

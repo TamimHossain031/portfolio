@@ -9,3 +9,13 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+
+@layer components{
+  .nav-bg{
+    @apply text-white to-[#FC2A68] from-[#F93817] bg-gradient-to-tr
+  }
+
+ .section-bg{
+  @apply bg-white/30 dark:bg-[#22303c]/30  dark:text-[#fff] w-[80%] min-h-[400px] mx-auto mt-10 relative backdrop-blur-[20px] rounded-md shadow-2xl p-[20px]
+ }
+}
