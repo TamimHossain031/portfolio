@@ -9,29 +9,32 @@ import { HiOutlineDocumentText } from "react-icons/hi2";
 import { PiCertificate } from "react-icons/pi";
 import { RiContactsBook3Line } from "react-icons/ri";
 
+import { useContext } from "react";
+import { SingleData } from "../Context";
 export default function Nav() {
   const [show, setShow] = useState(true);
   const [active, setActive] = useState("about");
+  const { data, setData } = useContext(SingleData);
 
   const menu = [
     {
-      name: "about",
+      name: "About",
       logo: <FaRegUser />,
     },
     {
-      name: "resume",
+      name: "Resume",
       logo: <HiOutlineDocumentText />,
     },
     {
-      name: "works",
+      name: "Works",
       logo: <BsPersonWorkspace />,
     },
     {
-      name: "certificate",
+      name: "Certificate",
       logo: <PiCertificate />,
     },
     {
-      name: "contact",
+      name: "Contact",
       logo: <RiContactsBook3Line />,
     },
   ];
@@ -54,7 +57,10 @@ export default function Nav() {
               key={crypto.randomUUID()}
               data={single}
               active={active}
-              onActive={() => setActive(single.name)}
+              onActive={() => {
+                setActive(single.name);
+                setData(single.name);
+              }}
             />
           ))}
       </nav>
@@ -66,16 +72,14 @@ function SingleNav({ data, active, onActive }) {
   const { name, logo } = data;
 
   return (
-    <button onClick={onActive}>
-      <a
-        href={`#${name}`}
-        className={`text-[18px] flex flex-col justify-center align-middle items-center size-[60px] bg-slate-300/30 dark:text-white dark:bg-white/10 m-[3px] gap-[6px] shadow-md rounded-sm hover:transition-all hover:nav-bg ${
-          name == active ? "nav-bg" : ""
-        }`}
-      >
-        {logo}
-        <span className="capitalize text-[10px]">{name}</span>
-      </a>
+    <button
+      className={`text-[18px] flex flex-col justify-center align-middle items-center size-[60px] bg-slate-300/30 dark:text-white dark:bg-white/10 m-[3px] gap-[6px] shadow-md rounded-sm hover:transition-all hover:nav-bg ${
+        name == active ? "nav-bg" : ""
+      }`}
+      onClick={onActive}
+    >
+      {logo}
+      <span className="capitalize text-[10px]">{name}</span>
     </button>
   );
 }
