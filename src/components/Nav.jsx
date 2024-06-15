@@ -8,7 +8,7 @@ import {
 import { HiOutlineDocumentText } from "react-icons/hi2";
 import { PiCertificate } from "react-icons/pi";
 import { RiContactsBook3Line } from "react-icons/ri";
-import { Link } from "react-router-dom";
+
 export default function Nav() {
   const [show, setShow] = useState(true);
   const [active, setActive] = useState("about");
@@ -67,8 +67,7 @@ function SingleNav({ data, active, onActive }) {
 
   return (
     <button onClick={onActive}>
-      <Link
-        to={name}
+      <a
         href={`#${name}`}
         className={`text-[18px] flex flex-col justify-center align-middle items-center size-[60px] bg-slate-300/30 dark:text-white dark:bg-white/10 m-[3px] gap-[6px] shadow-md rounded-sm hover:transition-all hover:nav-bg ${
           name == active ? "nav-bg" : ""
@@ -76,7 +75,7 @@ function SingleNav({ data, active, onActive }) {
       >
         {logo}
         <span className="capitalize text-[10px]">{name}</span>
-      </Link>
+      </a>
     </button>
   );
 }
