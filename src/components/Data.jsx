@@ -2,6 +2,7 @@ import { useContext,useEffect,useState,Suspense } from "react";
 import { SingleData } from "../Context";
 import { lazyLoad } from "../utiles/lazyLoad";
 
+
 export default function Data() {
   const { data } = useContext(SingleData);
   const [selected,setSelected]=useState(null)
