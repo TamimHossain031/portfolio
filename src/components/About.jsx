@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div className='section-bg z-1'>
+    <div className="section-bg">
       <h1>About</h1>
     </div>
-  );
+  )
 }
