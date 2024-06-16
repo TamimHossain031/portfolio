@@ -19,3 +19,13 @@
   @apply bg-white/30 dark:bg-[#22303c]/30  dark:text-[#fff] w-[80%] min-h-[400px] mx-auto mt-10 relative backdrop-blur-[20px] rounded-md shadow-2xl p-[20px]
  }
 }
+
+@layer utilities{
+  .no-scrollbar::-webkit-scrollbar{
+    display:none;
+  }
+  .no-scrollbar{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+  }
+}
