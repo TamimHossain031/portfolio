@@ -13,7 +13,7 @@ import { useContext } from "react";
 import { SingleData } from "../Context";
 export default function Nav() {
   const [show, setShow] = useState(true);
-  const [active, setActive] = useState("about");
+  const [active, setActive] = useState("About");
   const { data, setData } = useContext(SingleData);
 
   const menu = [
