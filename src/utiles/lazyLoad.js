@@ -1,6 +1,5 @@
-import {lazy} from 'react';
+import { lazy } from "react";
 
-export function lazyLoad(file){
-     return lazy(()=> import(`../components/${file}`))
-   
+export function lazyLoad(file) {
+  return lazy(() => import(/* @vite-ignore */ `../components/${file}`));
 }
