@@ -12,7 +12,7 @@ export default function About() {
     }
   ]
   return (
-    <div className="text-left p-3">
+    <div className="text-left p-1">
      <div className='flex gap-6'>
       <h1 className='text-xl font-semibold mb-3'>About</h1>
       <span className='w-[180px] h-[3px] rounded-full inline-block bg-red-400 mt-4'></span>

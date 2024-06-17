@@ -28,7 +28,7 @@ export default function Data() {
 
 
   return (
-    <section className='w-[80%] section-bg max-h-[600px] overflow-y-scroll no-scrollbar'>     
+    <section className='w-[85%] section-bg max-h-[600px] overflow-y-scroll no-scrollbar'>     
       <Suspense fallback={<h1>Loading....</h1>}>
       {selected}
       </Suspense>

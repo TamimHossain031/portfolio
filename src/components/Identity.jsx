@@ -7,7 +7,7 @@ import Index from "./Index";
 import Social from "./Social";
 export default function Identity() {
   return (
-    <section className="bg-white/30 dark:bg-[#22303c]/30  dark:text-[#fff] w-[80%] min-h-[400px] mx-auto mt-10 z-2 relative backdrop-blur-[20px] rounded-md shadow-2xl p-[20px] pt-[140px]">
+    <section className="bg-white/30 dark:bg-[#22303c]/30  dark:text-[#fff] w-[85%] min-h-[400px] mx-auto mt-10 z-2 relative backdrop-blur-[20px] rounded-md shadow-2xl p-[20px] pt-[140px]">
       <div className="size-[160px] md:size-[200px] bg-red-400 mx-auto absolute top-[-80px] left-[50%] translate-x-[-50%] rounded-md overflow-hidden">
         <img
           src={author}
