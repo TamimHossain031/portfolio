@@ -5,26 +5,26 @@ export default function Social() {
     {
       links: "https://www.facebook.com/massenger.net",
       icon: <FaFacebookF />,
-      hover: "bg-sky-500",
+      hover: "hover:bg-sky-500",
       color: "text-[#1773EA]",
     },
     {
       links: "https://x.com/TamimHo79904966",
       icon: <FaXTwitter />,
-      hover: "bg-[#15202b]",
+      hover: "hover:bg-[#15202b]",
       color: "text-[#000]",
     },
     {
       links: "https://github.com/TamimHossain031",
       icon: <FaGithub />,
-      hover: "bg-[#010409]",
+      hover: "hover:bg-[#010409]",
       color: "text-[#000]",
     },
     {
       links: "https://www.behance.net/tamimhossain031",
       icon: <FaBehance />,
-      hover: "bg-[#003ECB]",
-      color: "text-[#1666F7]",
+      hover: "hover:bg-[#d83f87]",
+      color: "text-[#d83f87]",
     },
   ];
   return (
@@ -41,10 +41,10 @@ export default function Social() {
 
 function Link({ social }) {
   const { links, icon, hover, color } = social;
-
+ 
   return (
     <a
-      className={`hover:${hover} hover:text-white ${color} dark:text-white`}
+      className={`${hover} hover:text-white ${color} dark:text-white`}
       href={links}
       target="_blank"
     >

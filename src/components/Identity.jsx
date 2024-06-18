@@ -18,8 +18,8 @@ export default function Identity() {
       <h1 className="text-xl font-[400] tracking-wide flex gap-2 mx-auto w-fit bg-white/10 p-3 rounded-full backdrop-blur-[50px]">
         <AiOutlineUser /> <span className="mt-[-4px]">Tamim Hossain</span>
       </h1>
-      <p className="font-thin text-black dark:text-white pt-2 tracking-wider mb-5">
-        Web Designer & Developer
+      <p className="font-[300] text-sm text-black dark:text-white pt-2 tracking-wider mb-5">
+        Web Designer & Developer(FrontEnd)
       </p>
       <Social />
       <Index />
