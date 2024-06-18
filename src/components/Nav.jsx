@@ -46,7 +46,7 @@ export default function Nav() {
         }  p-2 rounded-md mx-auto shadow-xl justify-around z-[1000]`}
       >
         <button
-          className="absolute top-[20px] left-[-50px]  bg-gradient-to-r text-white from-[#FC2A68] to-[#F93817] size-[30px] flex justify-center items-center"
+          className="absolute top-[20px] left-[-50px] rounded-md  bg-gradient-to-r text-white from-[#FC2A68] to-[#F93817] size-[30px] flex justify-center items-center"
           onClick={() => setShow((prev) => !prev)}
         >
           {!show ? <FaAngleDoubleRight /> : <FaAngleDoubleLeft />}
