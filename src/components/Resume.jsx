@@ -120,11 +120,11 @@ export default function Resume() {
             <h2 className="my-2 border-b-2 text-sm  w-fit">
               Frameworks :
             </h2>
-            <p>Next.js</p>
+            <p>Next.js , Tailwind CSS</p>
             <h2 className="my-2 border-b-2 text-sm  w-fit">
               Library :
             </h2>
-            <p>React.js , jQuery </p>
+            <p>React.js , jQuery , Bootstrap </p>
             <h2 className="my-2 border-b-2 text-sm  w-fit">
               Design Tools :
             </h2>
@@ -183,7 +183,7 @@ function Skill({ data }) {
         </span>
         <span className="text-xs">{name}</span>
       </div>
-      <div className="w-[70%] h-[4px] bg-white mt-[15px] rounded-full">
+      <div className="w-[100%] h-[4px] bg-white mt-[15px] rounded-full">
         <div className={`w-[${progress}%] ${bg} h-[4px] rounded-full`}>
           <span className="float-right pt-2 text-xs">{progress} % </span>
         </div>
