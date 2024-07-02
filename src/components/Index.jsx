@@ -32,14 +32,14 @@ export default function Index() {
   ];
 
   return (
-    <motion.div className="bg-slate-300/30 dark:bg-white/10 backdrop-blur-[50px] w-full min-h-9 mt-2 p-2 rounded-md mb-10"
+    <div className="bg-slate-300/30 dark:bg-white/10 backdrop-blur-[50px] w-full min-h-9 mt-2 p-2 rounded-md mb-10"
     initial={{ opacity: 0, scale:0 }}
     animate={{ opacity: 1, scale:1 }}
     transition={{ duration: 1 }}
     >
       {contacts &&
         contacts.map((single) => <Contact key={single.name} data={single} />)}
-    </motion.div>
+    </div>
   );
 }
 

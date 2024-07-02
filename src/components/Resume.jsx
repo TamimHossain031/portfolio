@@ -43,7 +43,7 @@ export default function Resume() {
       name: "HTML5",
       color: "text-[#F75431]",
       bg: "bg-[#F75431]",
-      progress: 90,
+      progress: "90%",
     },
     {
       id: 2,
@@ -51,7 +51,7 @@ export default function Resume() {
       name: "CSS3",
       color: "text-[#146EB0]",
       bg: "bg-[#146EB0]",
-      progress: 90,
+      progress: "90%",
     },
     {
       id: 3,
@@ -59,7 +59,7 @@ export default function Resume() {
       name: "Javascript",
       color: "text-[#EFD81D]",
       bg: "bg-[#EFD81D]",
-      progress: 85,
+      progress: "90%",
     },
     {
       id: 4,
@@ -67,7 +67,7 @@ export default function Resume() {
       name: "php",
       color: "text-[#858EB8]",
       bg: "bg-[#858EB8]",
-      progress: 80,
+      progress: "80%",
     },
   ];
   return (
@@ -109,39 +109,28 @@ export default function Resume() {
             Tools & Technologies
           </h2>
           <div className="backdrop-blur-[20px] [&>h2]:mt-[12px] [&>h2]:border-b-[#cb2d6f] bg-[#15202b]/10 p-3 text-left dark:bg-white/10 my-4 rounded-md">
-            <p className='text-sm'>
+            <p className="text-sm">
               I am proficient in a wide range of tools and technologies,
               including but not limited to:{" "}
             </p>
-            <h2 className="my-2 text-sm border-b-2  w-fit">
-              Language :
-            </h2>
+            <h2 className="my-2 text-sm border-b-2  w-fit">Language :</h2>
             <p>HTML , CSS , Javascript , PHP , C </p>
-            <h2 className="my-2 border-b-2 text-sm  w-fit">
-              Frameworks :
-            </h2>
+            <h2 className="my-2 border-b-2 text-sm  w-fit">Frameworks :</h2>
             <p>Next.js , Tailwind CSS</p>
-            <h2 className="my-2 border-b-2 text-sm  w-fit">
-              Library :
-            </h2>
+            <h2 className="my-2 border-b-2 text-sm  w-fit">Library :</h2>
             <p>React.js , jQuery , Bootstrap </p>
-            <h2 className="my-2 border-b-2 text-sm  w-fit">
-              Design Tools :
-            </h2>
+            <h2 className="my-2 border-b-2 text-sm  w-fit">Design Tools :</h2>
             <p>Figma, Photoshop</p>
             <h2 className="my-2 border-b-2 text-sm  w-fit">
               Version Control :
             </h2>
             <p>Git, GitHub </p>
             <h2 className="my-2 border-b-2 text-sm  w-fit">
-            Content Management Systems :
+              Content Management Systems :
             </h2>
             <p>Wordpress</p>
-            <h2 className="my-2 border-b-2 text-sm  w-fit">
-            Database :
-            </h2>
+            <h2 className="my-2 border-b-2 text-sm  w-fit">Database :</h2>
             <p>MySQL , Firebase</p>
-            
           </div>
         </div>
       </div>
@@ -183,8 +172,8 @@ function Skill({ data }) {
         </span>
         <span className="text-xs">{name}</span>
       </div>
-      <div className="w-[100%] h-[4px] bg-white mt-[15px] rounded-full">
-        <div className={`w-[${progress}%] ${bg} h-[4px] rounded-full`}>
+      <div className="w-full h-[4px] bg-white mt-[15px] rounded-full">
+        <div className={`w-[${progress}] ${bg} h-[4px] rounded-full`}>
           <span className="float-right pt-2 text-xs">{progress} % </span>
         </div>
       </div>

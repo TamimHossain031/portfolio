@@ -3,7 +3,7 @@ import "./App.css";
 import Page from "./components/Page";
 
 function App() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   return (
     <section className={dark ? "dark" : ""}>
       <Page dark={dark} handleDark={() => setDark((dark) => !dark)} />
