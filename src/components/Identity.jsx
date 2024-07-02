@@ -3,11 +3,15 @@ import { GrDocumentDownload } from "react-icons/gr";
 import resume from "../assets/TAMIM_2.pdf";
 import author from "../assets/[removal.ai]_tmp-638332ed500fc.png";
 import Index from "./Index";
-
+import { motion } from "framer-motion";
 import Social from "./Social";
 export default function Identity() {
   return (
-    <section className="bg-white/30 dark:bg-[#22303c]/30  dark:text-[#fff] w-[85%] min-h-[400px] mx-auto mt-10 z-2 relative backdrop-blur-[20px] rounded-md shadow-2xl p-[20px] pt-[140px]">
+    <motion.section className="bg-white/30 dark:bg-[#22303c]/30  dark:text-[#fff] w-[85%] min-h-[400px] mx-auto mt-10 z-2 relative backdrop-blur-[20px] rounded-md shadow-2xl p-[20px] pt-[140px]"
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    >
       <div className="size-[160px] md:size-[200px] bg-red-400 mx-auto absolute top-[-80px] left-[50%] translate-x-[-50%] rounded-md overflow-hidden">
         <img
           src={author}
@@ -35,6 +39,6 @@ export default function Identity() {
         </span>{" "}
         <span className="mt-[-3px]">Download Cv</span>{" "}
       </a>
-    </section>
+    </motion.section>
   );
 }

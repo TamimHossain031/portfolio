@@ -87,7 +87,7 @@ function SingleWork(data) {
     <div className={`flex gap-3 ${color} p-5 min-h-[200px] mb-3 backdrop-blur-[2px] rounded-xl`}>
       <div className={`w-[30%] text-[20px] mt-2 flex`}>
         <span
-          className={`size-[40px] rounded-md flex justify-center py-[20%] ${color} ${txtColor}`}
+          className={`size-[40px] rounded-md flex justify-center py-[10px] ${color} ${txtColor}`}
         >
           {logo}{" "}
         </span>

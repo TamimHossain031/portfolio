@@ -2,6 +2,7 @@ import { CgSmartphone } from "react-icons/cg";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { motion } from "framer-motion";
 export default function Index() {
   const contacts = [
     {
@@ -31,10 +32,14 @@ export default function Index() {
   ];
 
   return (
-    <div className="bg-slate-300/30 dark:bg-white/10 backdrop-blur-[50px] w-full min-h-9 mt-2 p-2 rounded-md mb-10">
+    <motion.div className="bg-slate-300/30 dark:bg-white/10 backdrop-blur-[50px] w-full min-h-9 mt-2 p-2 rounded-md mb-10"
+    initial={{ opacity: 0, scale:0 }}
+    animate={{ opacity: 1, scale:1 }}
+    transition={{ duration: 1 }}
+    >
       {contacts &&
-        contacts.map((single, index) => <Contact key={index} data={single} />)}
-    </div>
+        contacts.map((single) => <Contact key={single.name} data={single} />)}
+    </motion.div>
   );
 }
 

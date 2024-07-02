@@ -1,7 +1,7 @@
 import { useContext,useEffect,useState,Suspense } from "react";
 import { SingleData } from "../Context";
 import { lazyLoad } from "../utiles/lazyLoad";
-
+import { motion } from "framer-motion";
 
 export default function Data() {
   const { data } = useContext(SingleData);
@@ -28,11 +28,15 @@ export default function Data() {
 
 
   return (
-    <section className='w-[85%] section-bg max-h-[600px] overflow-y-scroll no-scrollbar'>     
+    <motion.section className='w-[85%] section-bg max-h-[600px] overflow-y-scroll no-scrollbar'
+    initial={{ opacity: 0, x:'-100%' }}
+    animate={{ opacity: 1, x:0 }}
+    transition={{ duration: 1 }}
+    >     
       <Suspense fallback={<h1>Loading....</h1>}>
       {selected}
       </Suspense>
      
-    </section>
+    </motion.section>
   );
 }
