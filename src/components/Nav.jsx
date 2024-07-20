@@ -41,12 +41,12 @@ export default function Nav() {
   return (
     <>
       <nav
-        className={`flex flex-col bg-white/50 dark:bg-[#22303c]/30 transition-all duration-500 backdrop-blur-[20px] w-fit fixed top-[10%] ${
+        className={`flex flex-col bg-white/50 dark:bg-[#22303c]/30 transition-all duration-500 backdrop-blur-[20px] w-fit fixed top-[10%] md:relative md:flex-row md:top-0 md:mx-0  md:ml-[-30px] ${
           show ? "right-[-100px]" : "right-[0px]"
         }  p-2 rounded-md mx-auto shadow-xl justify-around z-[1000]`}
       >
         <button
-          className="absolute top-[20px] left-[-50px] rounded-md  bg-gradient-to-r text-white from-[#FC2A68] to-[#F93817] size-[30px] flex justify-center items-center"
+          className="absolute md:hidden top-[20px] left-[-50px] rounded-md  bg-gradient-to-r text-white from-[#FC2A68] to-[#F93817] size-[30px] flex justify-center items-center"
           onClick={() => setShow((prev) => !prev)}
         >
           {!show ? <FaAngleDoubleRight /> : <FaAngleDoubleLeft />}

@@ -73,9 +73,12 @@ export default function About() {
           What I Do
         </h2>
       </div>
+      <div className='xl:grid grid-cols-2 gap-x-3'>
       {myWork.map((singleData) => (
         <SingleWork key={singleData.id} data={singleData} />
       ))}
+      </div>
+     
     </div>
   );
 }

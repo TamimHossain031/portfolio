@@ -17,7 +17,7 @@ export default function Page({ dark, handleDark }) {
           {dark ? <GoSun /> : <BsFillMoonStarsFill />}
         </button>
       </header>
-      <section className='flex flex-col gap-5'>
+      <section className='flex flex-col md:flex-row md:gap-1'>
         <Identity />
         <AllDetails/>
       </section>

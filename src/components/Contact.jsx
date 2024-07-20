@@ -27,8 +27,8 @@ export default function Contact() {
         className="max-w-[600px] h-[500px] border border-sky-400 mx-auto bg-white/30 dark:bg-[#22303c]/30 backdrop-blur-[10px] mt-5 p-5 flex flex-col gap-3 justify-center rounded-md"
         onSubmit={onSubmit}
       >
-        <label htmlFor="name">
-          Name :{" "}
+        <label htmlFor="name" className='text-left'>
+          <p className='text-left'>Name :{" "}</p>
           <input
             className="bg-transparent border border-sky-400 rounded-md p-1"
             type="text"
@@ -37,8 +37,8 @@ export default function Contact() {
             required
           />
         </label>
-        <label htmlFor="email">
-          Email :{" "}
+        <label htmlFor="email" className='text-left'>
+          <p className='text-left'>Email :{" "}</p>
           <input
             className="bg-transparent border border-sky-400 rounded-md p-1"
             type="email"
