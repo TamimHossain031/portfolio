@@ -43,7 +43,7 @@ export default function Resume() {
       name: "HTML5",
       color: "text-[#F75431]",
       bg: "bg-[#F75431]",
-      progress: "90",
+      progress: 90,
     },
     {
       id: 2,
@@ -51,7 +51,7 @@ export default function Resume() {
       name: "CSS3",
       color: "text-[#146EB0]",
       bg: "bg-[#146EB0]",
-      progress: "90",
+      progress: 95,
     },
     {
       id: 3,
@@ -59,7 +59,7 @@ export default function Resume() {
       name: "Javascript",
       color: "text-[#EFD81D]",
       bg: "bg-[#EFD81D]",
-      progress:'90',
+      progress:90,
     },
     {
       id: 4,
@@ -67,7 +67,7 @@ export default function Resume() {
       name: "php",
       color: "text-[#858EB8]",
       bg: "bg-[#858EB8]",
-      progress:'90',
+      progress:80,
     },
   ];
   return (
@@ -172,8 +172,8 @@ function Skill({ data }) {
         </span>
         <span className="text-xs">{name}</span>
       </div>
-      <div className="w-full h-[4px] bg-white mt-[15px] rounded-full">
-        <div className={`max-w-full w-[${progress}%] ${bg} h-[4px] rounded-full`}>
+      <div className="w-[300px] h-[4px] bg-white mt-[15px] rounded-full">
+        <div className={`w-[${progress}px] ${bg} h-[4px] rounded-full`}>
           <span className="float-right pt-2 text-xs">{progress} %</span>
         </div>
       </div>
