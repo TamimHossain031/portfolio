@@ -44,7 +44,7 @@ function Link({ social }) {
  
   return (
     <a
-      className={`${hover} hover:text-white ${color} dark:text-white`}
+      className={`${hover} hover:text-white ${color} dark:text-white dark:hover:bg-fuchsia-600`}
       href={links}
       target="_blank"
     >
