@@ -1,0 +1,1 @@
+import{j as e}from"./index-CZr-1jrc.js";function l({head:s}){return e.jsx(e.Fragment,{children:e.jsxs("div",{className:"flex gap-6",children:[e.jsx("h1",{className:"text-xl font-semibold mb-3",children:s}),e.jsx("span",{className:"w-[180px] h-[3px] rounded-full inline-block bg-red-400 mt-4"})]})})}export{l as default};

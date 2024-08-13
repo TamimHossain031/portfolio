@@ -8,8 +8,8 @@ import Social from "./Social";
 export default function Identity() {
   return (
     <motion.section className="bg-white/30 dark:bg-[#22303c]/30  dark:text-[#fff] w-[85%] h-fit mx-auto mt-10 z-2 relative backdrop-blur-[20px] rounded-md shadow-2xl p-[20px] pt-[140px] md:w-[40%] xl:w-[30%]"
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
+    initial={{ opacity: 0, x:'-100px' }}
+    animate={{ opacity: 1, x:'0' }}
     transition={{ duration: 0.5 }}
     >
       <div className="size-[160px] md:size-[200px] bg-red-400 mx-auto absolute top-[-80px] left-[50%] translate-x-[-50%] rounded-md overflow-hidden">
