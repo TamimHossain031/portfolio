@@ -29,9 +29,9 @@ export default function Data() {
 
   return (
     <motion.section className='w-[85%] section-bg max-h-[600px] overflow-y-scroll no-scrollbar'
-    initial={{ opacity: 0, x:'100px' }}
+    initial={{ opacity: 0, x:'50px' }}
     animate={{ opacity: 1, x:'0' }}
-    transition={{ duration: 1 }}
+    transition={{ duration:0.5 }}
     >     
       <Suspense fallback={<h1>Loading....</h1>}>
       {selected}
